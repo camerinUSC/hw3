@@ -2,7 +2,7 @@
 #define CIRCUIT_H
 #include <vector>
 
-#include "../heap.h"
+#include "/home/codio/workspace/hw3/heap.h"
 #include "event.h"
 #include "gate.h"
 
@@ -23,7 +23,7 @@ class Circuit
     std::vector<Gate*> m_gates;
     std::vector<Wire*> m_wires;
 		// we need to add the m_pq data member. It should be a min-heap of Event*;
-        
+        Heap<Event*, EventLess> m_pq;
 };
 
 #endif

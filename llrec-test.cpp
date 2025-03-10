@@ -87,9 +87,30 @@ int main(int argc, char* argv[])
 
     // Test out your linked list code
 
-
-
     
+    int pivot = 10;
+    Node* smaller;
+    Node* larger;
+    llpivot(head, smaller,larger, pivot);
+    cout << "Original list: ";
+    print(head);
+
+    cout << "Smaller list: ";
+    print(smaller);
+
+    cout << "Larger list: ";
+    print(larger);
+
+
+
+/*
+oddFinder odd; 
+Node* newHead = llfilter(head, odd);
+
+cout << "New list: ";
+print(newHead);
+
+  */  
     return 0;
 
 }

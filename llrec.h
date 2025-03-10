@@ -83,8 +83,25 @@ Node* llfilter(Node* head, Comp pred)
     //*********************************************
     // Provide your implementation below
     //*********************************************
+  if(head == NULL){
+    return NULL;
+  }
 
+  Node *temp = llfilter(head->next, pred);
+
+  if(pred(head->val)){
+    delete head;
+		return temp;
+  }
+
+  head->next = temp;
+  return head;
 
 }
 
+struct oddFinder{
+  bool operator()(int x){
+    return (x%2 == 1);
+  }
+};
 #endif
